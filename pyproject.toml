@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "autogen-ext-yepcode"
+version = "0.1.0"
+description = "An AutoGen extension that allows code execution using YepCode's secure serverless runtime"
+authors = ["YepCode Developers <developers@yepcode.io>"]
+license = "See LICENSE file"
+readme = "README.md"
+homepage = "https://yepcode.io/"
+keywords = ["autogen", "autogen-ext", "yepcode", "code-execution", "serverless"]
+packages = [{include = "autogen_ext_yepcode", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+autogen-core = "^0.6.2"
+yepcode-run = "^1.4.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.extras]
+examples = ["autogen-agentchat", "autogen-ext", "anthropic"]
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+pytest-asyncio = "^0.24.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.examples.dependencies]
+autogen-agentchat = "^0.6.2"
+autogen-ext = {extras = ["anthropic"], version = "^0.6.2"}
+anthropic = "^0.57.1"
