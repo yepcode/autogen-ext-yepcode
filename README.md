@@ -12,6 +12,8 @@
 
 An [AutoGen](https://github.com/microsoft/autogen) extension that enables secure code execution using [YepCode's](https://yepcode.io/) serverless runtime environment. Execute Python and JavaScript code in production-grade, isolated sandboxes with built-in security and scalability.
 
+> **Note**: If you are looking for the extension for AG2, which was evolved from AutoGen, please check the [autogen-ext-yepcode](https://github.com/yepcode/ag2-ext-yepcode) repository.
+
 ## Features
 
 - **Secure Execution**: Code runs in isolated, production-grade sandboxes
